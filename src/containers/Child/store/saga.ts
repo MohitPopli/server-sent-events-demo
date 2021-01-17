@@ -5,6 +5,7 @@ import { subscribeToSSE } from '../../../utils/SSEUtil';
 import * as ChildActions from './actions';
 import { UpdateEventType } from './types';
 import { childSelector } from './selectors';
+import { push } from 'connected-react-router';
 
 function* subscribe() {
   try {
@@ -30,9 +31,14 @@ function* unSubscribe() {
   yield put(ChildActions.setChannel(undefined));
 }
 
+function* navigate() {
+  yield put(push('/'));
+}
+
 function* childSagas() {
   yield takeLatest(ChildActionTypes.SUBSCRIBE_TO_CHILD_UPDATES, subscribe);
   yield takeLatest(ChildActionTypes.UNSUBSCRIBE_TO_CHILD_UPDATES, unSubscribe);
+  yield takeLatest(ChildActionTypes.NAVIGATE_TO_HOME, navigate);
 }
 
 // eslint-disable-next-line

@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This application is only intended for demonstrating purpose of Server Sent Events using React with Typescript. I have used saga and redux middleware to communicate between components.
 
 ## Available Scripts
 
@@ -13,6 +13,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+Make sure your node sever is running. You can [download](https://gist.github.com/MohitPopli/7ccbae41c993baea66f62a368f6da4b7) it from here. Make sure to create a folder at same level where this application folder lives and add server.js file inside that folder. 
+
+To run server you can open terminal and run `node server.js`
 
 ### `yarn test`
 
@@ -38,9 +42,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
